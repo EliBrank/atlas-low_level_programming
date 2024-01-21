@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include "main.h"
 
 /**
  * main - prints the alphabet a-z
@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	char *s;
+	char s;
 
-	for (s = 'a'; s <= 'z'; i++)
+	for (s = 'a'; s <= 'z'; s++)
 	{
 		_putchar(s);
 	}
