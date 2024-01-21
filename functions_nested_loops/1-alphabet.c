@@ -1,7 +1,7 @@
 #include "_putchar.c"
 
 /**
- * main - prints "_putchar"
+ * main - prints the alphabet a-z
  *
  * Return: 0 (always success)
  */
@@ -9,12 +9,10 @@
 int main(void)
 {
 	char *s;
-	int i;
 
-	s = "_putchar";
-	for (i = 0; i != '\0'; i++)
+	for (s = 'a'; s <= 'z'; i++)
 	{
-		_putchar(s[i]);
+		_putchar(s);
 	}
 	_putchar('\n');
 
