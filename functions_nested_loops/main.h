@@ -3,7 +3,6 @@
 
 #include <unistd.h>
 
-//prototypes
 int _putchar(char c);
 
 #endif
