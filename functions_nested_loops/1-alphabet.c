@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	print_alphabet(void);	
+	print_alphabet();	
 
 	return (0);
 }
 
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char s;
 
@@ -22,6 +22,4 @@ int print_alphabet(void)
 		_putchar(s);
 	}
 	_putchar('\n');
-
-	return (0);
 }

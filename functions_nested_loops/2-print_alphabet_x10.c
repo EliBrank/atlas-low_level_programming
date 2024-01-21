@@ -6,15 +6,23 @@
  * Return: 0 (always success)
  */
 
-int print_alphabet(void)
+int main(void)
+{
+	print_alphabet_x10();
+
+	return (0);
+}
+
+void print_alphabet_x10(void)
 {
 	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		print_alphabet();
+		for (j = 'a'; j <= 'z'; j++)
+		{
+			_putchar(j);
+		}
 	}
 	_putchar('\n');
-
-	return (0);
 }
