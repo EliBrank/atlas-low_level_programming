@@ -1,17 +1,8 @@
 #include "main.h"
 
 /**
- * main - prints the alphabet a-z
- *
- * Return: 0 (always success)
+ * print_alphabet - prints the alphabet a-z
  */
-
-int main(void)
-{
-	print_alphabet();	
-
-	return (0);
-}
 
 void print_alphabet(void)
 {
