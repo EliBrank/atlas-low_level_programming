@@ -1,24 +1,18 @@
 #include "main.h"
 
 /**
- * _islower - prints the alphabet a-z 10 times
- * @c checked char
+ * _islower - prints a 1 if input is lowercase, 0 otherwise
+ * @c: checked input
  *
- * Return: 1 if lowercase, else 0
+ * Return: 1 if letter, else 0
  */
 
-int _islower(int c)
+int _islower(int c);
 {
-	int i;
-
-	for (i = 0; i < 10; i++)
+	if (97 <= c <= 122)
 	{
-		for (j = 'a'; j <= 'z'; j++)
-		{
-			_putchar(j);
-		}
+		return (1);
 	}
-	_putchar('\n');
 
 	return (0);
 }
