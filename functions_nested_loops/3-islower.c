@@ -7,7 +7,7 @@
  * Return: 1 if letter, else 0
  */
 
-int _islower(int c);
+int _islower(int c)
 {
 	if (97 <= c <= 122)
 	{
