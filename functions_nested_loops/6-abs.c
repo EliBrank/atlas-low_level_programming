@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stdio.h"
 
 /**
  * _abs - prints '+' for positive input, '-' for negative, 0 for 0
@@ -12,6 +11,8 @@ int _abs(int n)
 {
 	if (n < 0)
 	{
+		int n;
+
 		n = (n * -1);
 		_putchar(n);
 
