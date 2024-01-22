@@ -1,25 +1,28 @@
 #include "main.h"
 
 /**
- * main - prints a 1 if input is a letter, 0 otherwise
+ * print_sign - prints '+' for positive input, '-' for negative, 0 for 0
+ * @n: checked num
  *
- * Return: 0 (always success)
+ * Return: 1 if letter, else 0
  */
 
-int main(void)
+int print_sign(int n)
 {
-	int _isalpha(int c);
-
-	return (0);
-}
-
-int _isalpha(int c);
-{
-	int c;
-
-	if (65 <= c <= 90 || 97 <= c <= 122)
+	if (n > 0)
 	{
+		_putchar('+');
 		return (1);
+	}
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
 	}
 
 	return (0);
