@@ -1,28 +1,25 @@
 #include "main.h"
 
 /**
- * _abs - prints '+' for positive input, '-' for negative, 0 for 0
+ * _abs - calcs absolute value of input num
  * @n: checked num
  *
- * Return: 1 if letter, else 0
+ * Return: 0 (always success)
  */
 
 int _abs(int n)
 {
 	if (n < 0)
 	{
-		int n;
+		int a;
 
-		n = (n * -1);
-		_putchar(n);
+		a = (n * -1);
 
-		return (0);
+		return (a);
 	}
 	else
 	{
-		_putchar(n);
-
-		return (0);
+		return (n);
 	}
 
 	return (0);
