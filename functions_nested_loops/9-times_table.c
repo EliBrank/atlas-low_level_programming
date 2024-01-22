@@ -20,6 +20,10 @@ void times_table(void)
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
 			}
+			else if (y == 0)
+			{
+				_putchar(mult + '0');
+			}
 			else
 			{
 				_putchar(' ');
