@@ -7,13 +7,6 @@
  * Return: 1 if lowercase, else 0
  */
 
-int main(void)
-{
-	print_alphabet_x10();
-
-	return (0);
-}
-
 int _islower(int c)
 {
 	int i;
