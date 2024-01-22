@@ -17,7 +17,15 @@ void jack_bauer(void)
 		{
 			for (m1 = 0; m1 < 5; m1++)
 			{
-			for (m2 = 0; m2 < 10; m2++)
+				for (m2 = 0; m2 < 10; m2++)
+				{
+					_putchar(h1 + '0');
+					_putchar(h2 + '0');
+					_putchar(':');
+					_putchar(m1 + '0');
+					_putchar(m2 + '0');
+					_putchar('\n');
+				}
 			}
 		}
 	}
