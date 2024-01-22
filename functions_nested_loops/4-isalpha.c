@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - prints a 1 if input is a letter, 0 otherwise
+ * _isalpha - prints a 1 if input is a letter, 0 otherwise
+ * @c: checked input
  *
- * Return: 0 (always success)
+ * Return: 1 if letter, else 0
  */
 
 int main(void)

@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - prints the alphabet a-z 10 times
+ * _islower - prints the alphabet a-z 10 times
+ * @c checked char
  *
- * Return: 0 (always success)
+ * Return: 1 if lowercase, else 0
  */
 
 int main(void)
