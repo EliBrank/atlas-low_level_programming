@@ -11,7 +11,7 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		while (p <= n)
+		while (p < n)
 		{
 			_putchar('_');
 			p++;
