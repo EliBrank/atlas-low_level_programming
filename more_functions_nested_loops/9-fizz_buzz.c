@@ -2,9 +2,11 @@
 
 /**
  * main - prints 1-100, following FizzBuzz conventions
+ *
+ * Return: 0 (always success)
  */
 
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -28,5 +30,7 @@ void main(void)
 		}
 	}
 	putchar('\n');
+
+	return (0);
 }
 
