@@ -18,7 +18,7 @@ void print_triangle(int size)
 			spacer = 1;
 			while (spacer <= (size - h))
 			{
-				_putchar('.');
+				_putchar(' ');
 				spacer++;
 			}
 			pound = 1;
