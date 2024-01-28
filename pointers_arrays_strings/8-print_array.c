@@ -20,4 +20,8 @@ void print_array(int *a, int n)
 		}
 		printf("%d\n", a[last]);
 	}
+	else
+	{
+		printf("%d\n", a[0])
+	}
 }
