@@ -18,10 +18,7 @@ void print_array(int *a, int n)
 			printf("%d, ", a[i]);
 			i++;
 		}
-		printf("%d\n", a[last]);
+		printf("%d", a[last]);
 	}
-	else
-	{
-		printf("%d\n", a[0]);
-	}
+	printf("\n");
 }
