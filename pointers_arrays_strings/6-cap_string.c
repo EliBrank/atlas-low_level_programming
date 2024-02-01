@@ -19,28 +19,26 @@ char *cap_string(char *s)
 			{
 				s[i] -= 32;
 			}
-			else if (s[i + 1] != '\0' && i != 0)
+			switch (s[i - 1])
 			{
-				switch (s[i - 1])
-				{
-					case '\t':
-					case ' ':
-					case '\n':
-					case ',':
-					case ';':
-					case '.':
-					case '!':
-					case '?':
-					case '"':
-					case '(':
-					case ')':
-					case '{':
-					case '}':
-						s[i] -= 32;
-					default:
-						break;
-				}
+				case '\t':
+				case ' ':
+				case '\n':
+				case ',':
+				case ';':
+				case '.':
+				case '!':
+				case '?':
+				case '"':
+				case '(':
+				case ')':
+				case '{':
+				case '}':
+					s[i] -= 32;
+				default:
+					break;
 			}
+			
 		}
 	}
 	return (s);
