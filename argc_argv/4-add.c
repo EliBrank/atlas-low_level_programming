@@ -10,7 +10,7 @@
  * Return: 0 if success or no nums, 1 if NaN
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int sum;
 	int i;
