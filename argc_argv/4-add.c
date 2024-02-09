@@ -2,14 +2,13 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * main - adds together positive numbers
  * @argc: number of arguments
- * @argv: array of arguments
+ * @argv: numbers to add
  *
- * Return: 0 if success or no nums, 1 if NaN symbol 
+ * Return: 0 if success or no nums, 1 if NaN
  */
 
 int main(int argc, char **argv)
@@ -17,7 +16,6 @@ int main(int argc, char **argv)
 	int sum;
 	int i;
 	int j;
-	int numLen;
 
 	if (argc == 1)
 	{
@@ -27,8 +25,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		numLen = strlen(argv[i]);
-		for (j = 0; j < numLen; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[i][j]))
 			{
