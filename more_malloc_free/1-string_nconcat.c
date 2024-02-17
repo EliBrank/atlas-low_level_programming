@@ -14,7 +14,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *catStr;
-	unsigned int i;
+	int i;
 	unsigned int j;
 	int lenS1;
 	int lenS2;
