@@ -3,19 +3,18 @@
 #include <string.h>
 
 /**
- * string_nconcat - concatenates two strings
+ * str_concat - concatenates two strings
  * @s1: first string to concatenate
  * @s2: second string to concatenate
- * @n: number of bytes from s2 to concatenate
  *
- * Return: concatenated string, NULL if failure
+ * Return: concatenated string, NULL on failure
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *str_concat(char *s1, char *s2)
 {
 	char *catStr;
-	unsigned int i;
-	unsigned int j;
+	int i;
+	int j;
 	int lenS1;
 	int lenS2;
 
@@ -42,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	/* loop through second string */
-	for (j = 0; j < n; j++, i++)
+	for (j = 0; j < lenS2; j++, i++)
 	{
 		catStr[i] = s2[j];
 	}
