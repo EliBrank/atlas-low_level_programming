@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
 /**
  * new_dog - creates a new dog
@@ -18,20 +17,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	newDog = malloc(sizeof(dog_t));
 
+
 	if (newDog == NULL)
+		return (NULL);
+
+	_strdup(newDog->name = name);
+	if (newDog->name == NULL)
 	{
+		free(newDog->name);
 		return (NULL);
 	}
 
-	if (newDog->name == NULL)
-		return (NULL);
-
-	if (newDog->owner == NULL)
-		return (NULL);
-
-	strcpy(newDog->name = name);
 	newDog->age = age;
-	strcpy(newDog->owner = owner);
+
+	_strdup(newDog->owner = owner);
+	if (newDog->owner == NULL)
+	{
+		free(newDog->owner);
+		return (NULL);
+	}
 
 	return (newDog);
 }
