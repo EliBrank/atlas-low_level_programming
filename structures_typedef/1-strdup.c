@@ -1,5 +1,3 @@
-#include "main.h"
-#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -20,7 +18,8 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	len = strlen(str);
+	for(len = 0; str[len] != '\0'; len++);
+	str -= len;
 
 	dupStr = malloc(sizeof(char) * len + 1);
 
