@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #ifndef FUNCP_H
 #define FUNCP_H
 
