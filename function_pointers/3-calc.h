@@ -10,7 +10,7 @@ int op_mod(int a, int b);
 
 /**
  * op_t - stores operator and function
- * @mathOp: mathematical operator
+ * @opSign: mathematical operator
  * @function: function to carry out operation
  *
  * Description: allows other code to exec func based on sign
