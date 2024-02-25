@@ -21,11 +21,13 @@ int (*get_op_func(char *s))(int, int)
 		};
 
 	i = 0;
-	while (i < 12)
+	while (ops[i].opSign != NULL)
 	{
-		if (*s == ops[i])
+		if (*s == *(ops[i].opSign))
 		{
-			return (ops[i + 1]);
+			return (ops[i].function);
 		}
+		i++;
 	}
+	return (NULL);
 }

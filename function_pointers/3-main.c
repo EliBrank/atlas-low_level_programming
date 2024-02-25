@@ -22,30 +22,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	/* no mathematical operator was passed */
-	if (argv[3] != '+' && argv[3] != '-' && argv[3] != '*' &&
-		argv[3] != '/' && argv[3] != '%')
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	a = atoi(argv[2]);
 	b = atoi(argv[4]);
 
-	switch (argv[3][0])
-	{
-		case '+':
-			result = get_op_func("+")(a, b);
-		case '-':
-			result = get_op_func("-")(a, b);
-		case '*':
-			result = get_op_func("*")(a, b);
-		case '/':
-			result = get_op_func("/")(a, b);
-		case '%':
-			result = get_op_func("%")(a, b);
-	}
+	result = get_op_func(argv[3])(a, b);
+
 	printf("%d\n", result);
 
 	return (0);

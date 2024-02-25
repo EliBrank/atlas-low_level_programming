@@ -16,7 +16,7 @@ int op_mod(int a, int b);
 
 typedef struct
 {
-	char *mathOp;
+	char *opSign;
 	int (*function)(int, int);
 } op_t;
 
