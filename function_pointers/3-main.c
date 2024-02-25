@@ -33,8 +33,15 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+
+	if ((op == '/' || op == '%') && b == 0)
+	{
+		printf("Error\n");
+		return (100);
+	}
 
 	result = get_op_func(argv[2])(a, b);
 
