@@ -15,11 +15,26 @@ int main(int argc, char *argv[])
 	int a;
 	int b;
 	int result;
+	char op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
+	}
+
+	op = argv[2][0];
+	if (op != '+' && op != '-' && op != '*' &&
+		op != '/' && op != '%')
+	{
+		printf("Error\n");
+		return (99);
+	}
+
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n");
+		return (100);
 	}
 
 	a = atoi(argv[1]);
