@@ -9,7 +9,7 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 
 /**
- * op - stores operator and function
+ * struct op - stores operator and function
  * @opSign: mathematical operator
  * @function: function to carry out operation
  *
