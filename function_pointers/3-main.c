@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	int b;
 	int result;
 	char op;
+	char nt;
 
 	if (argc != 4)
 	{
@@ -24,17 +25,12 @@ int main(int argc, char *argv[])
 	}
 
 	op = argv[2][0];
-	if (op != '+' && op != '-' && op != '*' &&
-		op != '/' && op != '%')
+	nt = argv[2][1];
+	if ((op != '+' && op != '-' && op != '*' && op != '/' &&
+		op != '%') || nt != '\0')
 	{
 		printf("Error\n");
 		return (99);
-	}
-
-	if (argv[2][1] != '\0')
-	{
-		printf("Error\n");
-		return (100);
 	}
 
 	a = atoi(argv[1]);
