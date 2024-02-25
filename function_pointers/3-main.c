@@ -22,10 +22,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	a = atoi(argv[2]);
-	b = atoi(argv[4]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
-	result = get_op_func(argv[3])(a, b);
+	result = get_op_func(argv[2])(a, b);
 
 	printf("%d\n", result);
 

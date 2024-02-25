@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 #include <stdlib.h>
 
 /**
@@ -30,7 +30,7 @@ int op_sub(int a, int b)
  * @a: first num to multiply
  * @b: second num to multiply
  *
- * Retrun: product
+ * Return: product
  */
 int op_mul(int a, int b)
 {
