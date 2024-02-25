@@ -19,13 +19,14 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (1);
+		return (98);
 	}
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
 	result = get_op_func(argv[2])(a, b);
+
 
 	printf("%d\n", result);
 
