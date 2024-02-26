@@ -13,10 +13,10 @@ void print_all(const char * const format, ...)
 	int len = 0, i = 0, noMatch = 0;
 	va_list args;
 
-	while (format[len] != '\0')
+	while (format != NULL && format[len] != '\0')
 		len++;
 	va_start(args, format);
-	while (i < len && format != NULL)
+	while (format != NULL && i < len)
 	{
 		switch (format[i])
 		{
