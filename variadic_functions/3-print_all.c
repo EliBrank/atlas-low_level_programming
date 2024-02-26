@@ -10,15 +10,11 @@
 
 void print_all(const char * const format, ...)
 {
-	int len;
-	int noMatch = 0;
-	int i = 0;
-	const char *f = format;
+	int len = 0, i = 0, noMatch = 0;
 	va_list args;
 
-	while (*f != '\0')
-		f++;
-	len = f - format;
+	while (format[len] != '\0')
+		len++;
 	va_start(args, format);
 	while (i < len && format != NULL)
 	{
