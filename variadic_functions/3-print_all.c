@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		f++;
 	len = f - format;
 	va_start(args, format);
-	while (i <= len)
+	while (i < len)
 	{
 		switch (format[i])
 		{
@@ -34,13 +34,13 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 			case 's':
-				if (va_arg(args, char*) == NULL)
 				{
-					printf("(nil)");
+					char *str = va_arg(args, char*);
+					if (str == NULL)
+						printf("(nil)");
+					printf("%s", str);
 					break;
 				}
-				printf("%s", va_arg(args, char *));
-				break;
 			default:
 				noMatch = 1;
 		}
