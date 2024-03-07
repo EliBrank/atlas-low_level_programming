@@ -16,11 +16,7 @@ size_t print_listint(const listint_t *h)
 
 	while (tmp != NULL)
 	{
-		if (tmp->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%i] %s\n", tmp->len, tmp->str);
-
+		printf("%i\n", tmp->n);
 		tmp = tmp->next;
 		count++;
 	}
