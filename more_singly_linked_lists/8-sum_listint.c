@@ -6,18 +6,21 @@
  * sum_listint - sums all data of a linked list
  * @head: first element of list
  *
- * Return: sum of ints in list
+ * Return: sum of ints in list, 0 if empty list
  */
 
 int sum_listint(listint_t *head)
 {
-	listint_t *tmp = NULL;
+	int sum = 0;
+
+	if (head == NULL)
+		return (0);
 
 	while (head != NULL)
 	{
-		tmp = head;
+		sum += head->n;
 		head = head->next;
-		free(tmp->str);
-		free(tmp);
 	}
+
+	return (sum);
 }
