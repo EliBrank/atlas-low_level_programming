@@ -11,7 +11,7 @@
  * Return: address of added element, NULL if failure
  */
 
-list_t *add_nodeint_end(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new = NULL;
 	listint_t *tmp;
@@ -19,21 +19,12 @@ list_t *add_nodeint_end(listint_t **head, const int n)
 	if (head == NULL)
 		return (NULL);
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 		return (NULL);
 
-	new->str = strdup(str);
-
-	if (new->str == NULL)
-	{
-		free(new->str);
-		free(new);
-		return (NULL);
-	}
-
-	new->len = _strlen(str);
+	new->n = n;
 	new->next = NULL;
 
 	if (*head == NULL)
@@ -47,23 +38,4 @@ list_t *add_nodeint_end(listint_t **head, const int n)
 		tmp->next = new;
 	}
 	return (new);
-}
-
-/**
- * _strlen - returns the length of a string
- * @s: input string
- *
- * Return: string length
- */
-int _strlen(const char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
 }
