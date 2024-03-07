@@ -6,7 +6,7 @@
 /**
  * add_nodeint - prepends node to linked list
  * @head: current first element in list
- * @str: string to duplicate for prepended element
+ * @n: int to duplicate for prepended element
  *
  * Return: address of added element, NULL if failure
  */
@@ -17,22 +17,12 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	if (head == NULL)
 		return (NULL);
 
-	new = malloc(sizeof(list_t));
+	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 		return (NULL);
 
-	new->str = strdup(str);
-
-	if (new->str == NULL)
-	{
-		free(new->str);
-		free(new);
-		return (NULL);
-	}
-
-	new->len = _strlen(str);
-
+	new->n = n;
 	new->next = *head;
 
 	*head = new;
