@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * binary to uint - converts binary number to unsigned int
+ * binary_to_uint - converts binary number to unsigned int
  * @b: binary number to be converted (string)
  *
  * Return: converted unsigned int
