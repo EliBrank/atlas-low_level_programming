@@ -15,11 +15,18 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int decimalNum = 0;
 	unsigned int twoPower = 1;
 
+	if (b == NULL)
+		return (0);
+
 	for (i = (len - 1); i >= 0; i--)
 	{
 		if (b[i] == '1')
 		{
 			decimalNum += twoPower;
+		}
+		else if (b[i] != '0')
+		{
+			return (0);
 		}
 		twoPower <<= 1;
 	}
