@@ -10,14 +10,14 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	int len = _strlen(b);
+	int i, len;
 	unsigned int decimalNum = 0;
 	unsigned int twoPower = 1;
 
 	if (b == NULL)
 		return (0);
 
+	len = _strlen(b);
 	for (i = (len - 1); i >= 0; i--)
 	{
 		if (b[i] == '1')
