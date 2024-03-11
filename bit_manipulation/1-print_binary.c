@@ -11,7 +11,6 @@ void print_binary(unsigned long int n)
 	/* example is 12, 1100 */
 	int i;
 	unsigned long int bit = 0;
-	unsigned long int binaryNum = 0;
 	int printLeader = 0;
 	unsigned long int numBits = sizeof(int) * 8;
 
