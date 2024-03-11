@@ -25,19 +25,21 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	bitCheck = bitCheck << index;
 
 	nFlip = (nFlip | bitCheck);
+	printf("%lu\n", nFlip);
 
 	for (i = numBits - 1; i >= 0; i--)
 	{
 		bit = ((*n) >> i) & 1;
 		if (bit == 1)
 		{
-			sigBit = i;
+			sigBit = numBits - i;
 			break;
 		}
 	}
-	printf("%d\n", sigBit);
 
-	*n = *n ^ nFlip;
+	printf("%lu\n", nFlip);
+
+	*n = *n & nFlip;
 
 	return (1);
 }
