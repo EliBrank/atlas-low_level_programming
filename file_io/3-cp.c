@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(98);
+		exit(99);
 	}
 
 	while ((nRead = read(fd_from, buf, BUFFER_SIZE)) > 0)
