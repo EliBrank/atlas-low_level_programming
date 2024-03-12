@@ -2,7 +2,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <sys/stat.h>
+#include <errno.h>
 #include "main.h"
 
 #define BUFFER_SIZE 1024
@@ -74,7 +74,7 @@ int open_from(char *file_from)
 	int fd;
 
 	fd = open(file_from, O_RDONLY);
-	if (fd == -1)
+	if (fd == -1 || errno == ENOENT)
 	{
 		dprintf(STDERR_FILENO,
 		"Error: Can't read from file %s\n", file_from);
