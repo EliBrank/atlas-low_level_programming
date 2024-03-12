@@ -94,7 +94,7 @@ int open_to(char *file_to)
 {
 	int fd;
 
-	fd = open(file_to, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
+	fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO,
