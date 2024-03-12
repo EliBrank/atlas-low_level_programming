@@ -27,7 +27,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	if (idx == 0)
-		add_nodeint(head, n);
+		return (add_nodeint(head, n));
+
 
 	tmp = *head;
 	i = 0;
@@ -40,6 +41,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	return (tmp);
 }
 
+/**
+ * add_nodeint - prepends node to linked list
+ * @head: current first element in list
+ * @n: int to duplicate for prepended element
+ *
+ * Return: address of added element, NULL if failure
+ */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new = NULL;
