@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/stat.h>
 #include "main.h"
 
 #define BUFFER_SIZE 1024
@@ -93,6 +94,12 @@ int open_to(char *file_to)
 
 	fd = open(file_to, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
 	if (fd == -1)
+	{
+		dprintf(STDERR_FILENO,
+		"Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
+	if (chmod(file_to, 0664) == -1)
 	{
 		dprintf(STDERR_FILENO,
 		"Error: Can't write to %s\n", file_to);
