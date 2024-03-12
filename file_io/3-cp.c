@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	while ((nRead = read(fd_from, buf, BUFFER_SIZE)) > 0)
 	{
 		nWrite = write(fd_to, buf, nRead);
-		if (nWrite == -1)
+		if (nWrite == -1 || nWrite != nRead)
 		{
 			dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", file_to);
