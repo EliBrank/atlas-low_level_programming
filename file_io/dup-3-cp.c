@@ -6,9 +6,6 @@
 
 #define BUFFER_SIZE 1024
 
-int open_from(char *file_from);
-int open_to(char *file_to);
-
 /**
  * main - copies file contents to specified file
  * @argc: number of args
@@ -32,8 +29,21 @@ int main(int argc, char *argv[])
 
 	file_from = argv[1];
 	file_to = argv[2];
-	fd_from = open_from(file_from);
-	fd_to = open_to(file_to);
+
+	fd_from = open(file_from, O_RDONLY);
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO,
+		"Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
 
 	while ((nRead = read(fd_from, buf, BUFFER_SIZE)) > 0)
 	{
@@ -60,43 +70,7 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-/**
- * open_from - opens file to copy from
- * @file_from: name of file to copy from
- *
- * Return: file descriptor for source file
- */
-int open_from(char *file_from)
+void read_from(char *)
 {
-	int fd;
 
-	fd = open(file_from, O_RDONLY);
-	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO,
-		"Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
-
-	return (fd);
-}
-
-/**
- * open_to - opens file to copy to
- * @file_to: name of file to copy to
- *
- * Return: file descriptor for destination file
- */
-int open_to(char *file_to)
-{
-	int fd;
-
-	fd = open(file_to, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
-	if (fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
-
-	return (fd);
 }
