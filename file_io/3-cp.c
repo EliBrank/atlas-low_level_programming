@@ -6,6 +6,15 @@
 
 #define BUFFER_SIZE 1024
 
+/**
+ * main - copies file contents to specified file
+ * @argc: number of args
+ * @argv: arg array (copies from argv[1] to argv[2])
+ *
+ * Return: 0 on success, 97 wrong arg num, 98 problem opening file origin
+ * 99 problem writing file contents, 100, problem closing file
+ */
+
 int main(int argc, char *argv[])
 {
 	int fd_to, fd_from, nRead, nWrite;
