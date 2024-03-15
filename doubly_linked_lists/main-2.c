@@ -14,10 +14,13 @@ int main(void)
 
     head = NULL;
     add_dnodeint_end(&head, 9);
-    add_dnodeint_end(&head, 6);
+    add_dnodeint_end(&head, 1);
+    add_dnodeint_end(&head, 72);
+    add_dnodeint_end(&head, 70);
+    add_dnodeint_end(&head, 98);
     print_dlistint(head);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 3, 98);
+    insert_dnodeint_at_index(&head, 5, 1024);
     print_dlistint(head);
     free_dlistint(head);
     head = NULL;
