@@ -37,7 +37,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 
 	if (tmp->next->next == NULL)
+	{
 		free(tmp->next);
+		tmp->next = NULL
+	}
 	else
 	{
 		follow = tmp->next->next;
