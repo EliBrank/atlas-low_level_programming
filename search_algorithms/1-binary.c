@@ -13,7 +13,6 @@ void print_array(const int *array, int low_index, int high_index);
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int value_index;
 	int low = 0;
 	int high = size - 1;
 
